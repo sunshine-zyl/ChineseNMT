@@ -113,7 +113,9 @@ def translate_example():
            "to childless workers."
     # tgt: 近期的政策对策很明确：把最低工资提升到足以一个全职工人及其家庭免于贫困的水平，扩大对无子女劳动者的工资所得税减免。
     one_sentence_translate(sent, beam_search=True)
-
+# cpu上测试    
+def translate_test(source):
+    one_sentence_translate(source, beam_search=True)
 
 if __name__ == "__main__":
     import os
@@ -121,4 +123,6 @@ if __name__ == "__main__":
     import warnings
     warnings.filterwarnings('ignore')
     # run()
-    translate_example()
+    src = "President Xi Jinping is expected to sign several cooperative agreements in manufacturing,finance,energy and " \
+            "cultural exchanges in an upcoming tour of Europe that experts said will seta tone for futureties."
+    translate_test(src)

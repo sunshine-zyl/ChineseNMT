@@ -37,7 +37,10 @@ output_path = './experiment/output.txt'
 # gpu_id and device id is the relative id
 # thus, if you wanna use os.environ['CUDA_VISIBLE_DEVICES'] = '2, 3'
 # you should set CUDA_VISIBLE_DEVICES = 2 as main -> gpu_id = '0', device_id = [0, 1]
+# 
 gpu_id = '0'
+# if you wanna use cpu, you should set gpu_id = ''
+gpu_id = ''
 device_id = [0, 1]
 
 # set device
